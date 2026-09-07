@@ -93,11 +93,11 @@
     </section>
 
     <!-- Mission / Split Screen Section -->
-    <section id="mission" class="relative min-h-[90vh] bg-theme-bg flex items-center overflow-hidden">
-        <div class="w-full grid grid-cols-1 lg:grid-cols-2 min-h-[80vh]">
+    <section id="mission" class="relative bg-theme-bg overflow-hidden">
+        <div class="w-full grid grid-cols-1 lg:grid-cols-2 min-h-[90vh]">
             
             <!-- Left Text Side -->
-            <div class="flex flex-col justify-center px-6 lg:px-20 py-16 md:py-20 relative z-20">
+            <div class="flex flex-col justify-center px-6 lg:px-20 py-24 relative z-20">
                 <h3 class="font-serif text-3xl md:text-4xl lg:text-5xl leading-tight mb-8 text-white tracking-tight">The <span class="italic text-theme-rust">highest</span> standard.<br>Every single journey.</h3>
                 <p class="text-theme-muted text-sm md:text-base max-w-md leading-relaxed mb-6 font-light">
                     Our mission is to aggressively reduce road accidents and vehicle incidents. Predictable, safe delivery is not an option—it is our objective in every course we teach and every inspection we oversee.
@@ -108,9 +108,9 @@
             </div>
 
             <!-- Right Image Side -->
-            <div class="relative h-64 md:h-full min-h-[40vh] md:min-h-[50vh] overflow-hidden lg:mr-12 lg:rounded-2xl z-10">
+            <div class="relative w-full h-[50vh] lg:h-full overflow-hidden z-10">
                 <div class="absolute inset-0 bg-theme-bg/20 z-10 pointer-events-none"></div>
-                <img src="assets/dock_bg.jpg" alt="Truck at dock" class="w-full h-[120%] object-cover object-center grayscale opacity-80 parallax-bg" data-speed="0.2">
+                <img src="assets/dock_bg.jpg" alt="Truck at dock" class="absolute -top-[15%] left-0 w-full h-[130%] object-cover object-center grayscale opacity-80 parallax-bg" data-speed="0.2">
             </div>
         </div>
 
@@ -133,11 +133,11 @@
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="relative min-h-[80vh] flex items-center border-t border-white/5 overflow-hidden">
-        <!-- Background Image -->
-        <div class="absolute inset-0 z-0 bg-black">
-            <div class="absolute inset-0 bg-theme-bg/85 z-10"></div>
-            <img src="assets/wheel_bg.jpg" alt="Truck wheels" class="w-full h-[130%] object-cover object-center opacity-40 parallax-bg" data-speed="0.3">
+    <section id="services" class="relative overflow-hidden border-t border-white/5 bg-black">
+        <div class="absolute inset-0 z-0 overflow-hidden">
+            <!-- Fade to dark at bottom, but keep top transparent to show image -->
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-black/60 to-black z-10 pointer-events-none"></div>
+            <img src="assets/wheel_bg.jpg" alt="Truck wheels" class="absolute -top-[20%] left-0 w-full h-[140%] object-cover object-center opacity-40 parallax-bg" data-speed="0.3">
         </div>
 
         <div class="max-w-7xl mx-auto px-6 lg:px-12 w-full relative z-20 pt-20 md:pt-32 pb-12 md:pb-16">
