@@ -1,0 +1,50 @@
+/* Classic Professional Styles */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Scrollbar for dark theme */
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-track {
+    background: #0a0a0a; 
+}
+::-webkit-scrollbar-thumb {
+    background: #333; 
+    border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+/* Navbar active state */
+.nav-scrolled {
+    background-color: rgba(10, 10, 10, 0.8) !important;
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+}
+
+/* Initial GSAP states */
+.gsap-fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+}
+.gsap-fade-left {
+    opacity: 0;
+    transform: translateX(30px);
+}
+
+/* Elegant text selection */
+::selection {
+    background: #ebe8e1;
+    color: #0a0a0a;
+}

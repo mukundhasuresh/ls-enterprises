@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L & S Enterprises | Transport & Safety</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        theme: {
+                            bg: '#050505',
+                            text: '#f2f2f2', 
+                            muted: '#a3a3a3',
+                            rust: '#EA4335', // Red/Rust from logo
+                            gold: '#d4af37', // Elegant gold
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                        display: ['Montserrat', 'sans-serif'], // Added new font for main heading
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@800;900&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-theme-bg text-theme-text font-sans antialiased overflow-x-hidden selection:bg-theme-rust selection:text-white">
+
+    <!-- Fixed Bottom Navigation (Pill Style) -->
+    <nav class="fixed bottom-8 w-full z-50 flex justify-center pointer-events-none" id="navbar">
+        <div class="bg-white text-black px-4 py-3 rounded-full flex items-center space-x-3 md:space-x-6 shadow-2xl pointer-events-auto border border-gray-200">
+            <a href="#hero" class="hidden md:flex w-8 h-8 rounded-full border border-gray-300 items-center justify-center hover:bg-gray-100 transition">
+                <i class="fas fa-chevron-up text-xs"></i>
+            </a>
+            <a href="#about" class="text-xs md:text-sm font-medium tracking-wide hover:text-theme-rust transition px-2">Manager</a>
+            <a href="#mission" class="text-xs md:text-sm font-medium tracking-wide hover:text-theme-rust transition px-2">Mission</a>
+            <a href="#services" class="text-xs md:text-sm font-medium tracking-wide hover:text-theme-rust transition px-2">Services</a>
+            <a href="#contact" class="bg-[#1f1f1f] text-white px-4 md:px-5 py-2 rounded-full text-xs md:text-sm font-medium hover:bg-theme-rust transition-colors ml-1 md:ml-2">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Top Logo -->
+    <div class="absolute top-6 left-6 md:top-8 md:left-12 z-40 flex items-center">
+        <!-- Colored Logo -->
+        <img class="h-12 md:h-16 w-auto drop-shadow-lg" src="assets/logo.png" alt="L&S Logo">
+    </div>
+
+    <!-- Hero Section -->
+    <section id="hero" class="h-[100dvh] min-h-[700px] relative flex items-center overflow-hidden">
+        <!-- Background Image with Parallax -->
+        <div class="absolute inset-0 z-0 bg-black">
+            <!-- Subtle gradient overlays instead of harsh cutoffs -->
+            <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/20 to-theme-bg z-10 pointer-events-none"></div>
+            <!-- Scaled up and aligned to the bottom to hide the black sky of the original image -->
+            <img src="assets/hero_bg.jpg" alt="Truck on road" class="absolute -top-[20%] w-full h-[140%] object-cover object-bottom opacity-60 parallax-bg" data-speed="0.4">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 w-full relative z-20 flex flex-col justify-center h-full pt-12 pb-24">
+            <!-- Main Title First -->
+            <h1 class="font-display font-black text-[13vw] md:text-[9vw] lg:text-[120px] leading-[0.9] tracking-tighter text-white uppercase gsap-fade-up">
+                L & S<br>Enterprises<span class="text-theme-rust">.</span>
+            </h1>
+            
+            <!-- Subtitle -->
+            <h2 class="font-serif text-2xl md:text-3xl lg:text-4xl text-theme-text mt-4 mb-8 gsap-fade-up" style="transition-delay: 0.1s;">
+                Safe<span class="text-theme-rust">.</span> 
+                Efficient<span class="text-theme-rust">.</span> 
+                <span class="italic">Elite<span class="text-theme-rust">.</span></span>
+            </h2>
+
+            <!-- Paragraph and Button below -->
+            <div class="max-w-2xl gsap-fade-up" style="transition-delay: 0.2s;">
+                <p class="text-theme-muted text-sm md:text-base leading-relaxed mb-6 max-w-lg">
+                    <span class="text-white font-semibold block mb-1 text-base md:text-lg">Over 35 Years of Experience.</span>
+                    Offering comprehensive road safety, advanced vehicle inspection, and fleet logistics training across the country with precision and predictability.
+                </p>
+                <a href="#contact" class="inline-flex items-center bg-white text-black px-6 py-3 rounded-full font-bold hover:bg-theme-rust hover:text-white transition-colors duration-300 shadow-lg">
+                    Book Consultation <i class="fas fa-arrow-right ml-3 text-sm"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission / Split Screen Section -->
+    <section id="mission" class="relative min-h-[90vh] bg-theme-bg flex items-center overflow-hidden pt-12 md:pt-20">
+        <div class="w-full grid grid-cols-1 lg:grid-cols-2 min-h-[80vh]">
+            
+            <!-- Left Text Side -->
+            <div class="flex flex-col justify-center px-6 lg:px-20 py-16 md:py-20 relative z-20">
+                <h3 class="font-serif text-3xl md:text-4xl lg:text-5xl leading-tight mb-8 text-white tracking-tight">The <span class="italic text-theme-rust">highest</span> standard.<br>Every single journey.</h3>
+                <p class="text-theme-muted text-sm md:text-base max-w-md leading-relaxed mb-6 font-light">
+                    Our mission is to aggressively reduce road accidents and vehicle incidents. Predictable, safe delivery is not an option—it is our objective in every course we teach and every inspection we oversee.
+                </p>
+                <p class="text-theme-muted text-sm md:text-base max-w-md leading-relaxed font-light">
+                    Education is the key to prevention. We empower drivers with the technical knowledge to protect themselves and their communities.
+                </p>
+            </div>
+
+            <!-- Right Image Side -->
+            <div class="relative h-64 md:h-full min-h-[40vh] md:min-h-[50vh] overflow-hidden lg:mr-12 lg:rounded-2xl z-10">
+                <div class="absolute inset-0 bg-theme-bg/20 z-10 pointer-events-none"></div>
+                <img src="assets/dock_bg.jpg" alt="Truck at dock" class="w-full h-[120%] object-cover object-center grayscale opacity-80 parallax-bg" data-speed="0.2">
+            </div>
+        </div>
+
+        <!-- Overlapping Text removed as requested -->
+    </section>
+
+    <!-- Manager Section -->
+    <section id="about" class="py-20 md:py-32 px-6 lg:px-12 bg-[#0a0a0a] border-t border-white/5 relative">
+        <div class="max-w-4xl mx-auto text-center">
+            <h4 class="text-xs uppercase tracking-[0.3em] text-theme-muted mb-8 md:mb-10 gsap-fade-up font-medium">Meet the Manager</h4>
+            
+            <h2 class="font-serif text-3xl md:text-5xl text-white mb-8 md:mb-10 gsap-fade-up tracking-tight leading-tight">
+                35 Years of <span class="italic text-theme-rust">Expertise.</span>
+            </h2>
+            
+            <p class="text-theme-muted font-light text-base md:text-lg max-w-2xl mx-auto leading-relaxed gsap-fade-up">
+                Our Training Manager is the driving force behind L & S Enterprises. An esteemed expert in road safety and fuel economy optimization. Known for his approachable teaching style and multi-lingual communication skills, he ensures that complex safety protocols are universally understood.
+            </p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="relative min-h-[80vh] flex items-center border-t border-white/5 overflow-hidden">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0 bg-black">
+            <div class="absolute inset-0 bg-theme-bg/85 z-10"></div>
+            <img src="assets/wheel_bg.jpg" alt="Truck wheels" class="w-full h-[130%] object-cover object-center opacity-40 parallax-bg" data-speed="0.3">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 w-full relative z-20 py-20 md:py-32">
+            <h4 class="text-xs uppercase tracking-[0.3em] text-theme-rust mb-12 md:mb-16 gsap-fade-up font-medium">Training Services</h4>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 lg:gap-x-16 gap-y-10 md:gap-y-12">
+                
+                <!-- Service Item -->
+                <div class="group gsap-fade-up border-b border-white/10 pb-6 md:pb-8">
+                    <h3 class="font-serif text-xl md:text-2xl text-white mb-3 group-hover:text-theme-rust transition-colors">Defensive Driving</h3>
+                    <p class="text-theme-muted text-sm md:text-base leading-relaxed font-light">Anticipate hazards, manage risks, and react safely in unpredictable conditions.</p>
+                </div>
+
+                <!-- Service Item -->
+                <div class="group gsap-fade-up border-b border-white/10 pb-6 md:pb-8">
+                    <h3 class="font-serif text-xl md:text-2xl text-white mb-3 group-hover:text-theme-rust transition-colors">Advanced Vehicle Inspection</h3>
+                    <p class="text-theme-muted text-sm md:text-base leading-relaxed font-light">Hands-on module for thorough, professional-grade pre-trip and post-trip vehicle inspections.</p>
+                </div>
+
+                <!-- Service Item -->
+                <div class="group gsap-fade-up border-b border-white/10 pb-6 md:pb-8">
+                    <h3 class="font-serif text-xl md:text-2xl text-white mb-3 group-hover:text-theme-rust transition-colors">Fuel Economy & Eco-Driving</h3>
+                    <p class="text-theme-muted text-sm md:text-base leading-relaxed font-light">Driving techniques that significantly improve fuel mileage and reduce vehicle wear and tear.</p>
+                </div>
+
+                <!-- Service Item -->
+                <div class="group gsap-fade-up border-b border-white/10 pb-6 md:pb-8">
+                    <h3 class="font-serif text-xl md:text-2xl text-white mb-3 group-hover:text-theme-rust transition-colors">Fleet & Bus Safety Seminars</h3>
+                    <p class="text-theme-muted text-sm md:text-base leading-relaxed font-light">Tailored corporate workshops and specialized student transport programs covering onboard behavior and blind spots.</p>
+                </div>
+
+                <!-- Service Item -->
+                <div class="group gsap-fade-up border-b border-white/10 pb-6 md:pb-8 md:col-span-2">
+                    <h3 class="font-serif text-xl md:text-2xl text-white mb-3 group-hover:text-theme-rust transition-colors">Professional Counseling</h3>
+                    <p class="text-theme-muted text-sm md:text-base leading-relaxed font-light max-w-xl">One-on-one coaching for stress management, fatigue, and rebuilding confidence after on-road incidents.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 md:py-32 px-6 lg:px-12 bg-theme-bg border-t border-white/5 relative z-20 pb-40 md:pb-48">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 items-start">
+            <div class="gsap-fade-up">
+                <h2 class="font-serif text-4xl md:text-6xl text-white mb-6 leading-tight">Ready to <br>prioritize <span class="italic text-theme-rust">safety.</span></h2>
+                <p class="text-theme-muted text-base md:text-lg mb-10 md:mb-12 font-light">Reach out to discuss your specific training needs or schedule a session.</p>
+                
+                <div class="space-y-6 md:space-y-8">
+                    <div>
+                        <p class="text-xs uppercase tracking-[0.2em] text-theme-muted mb-2 font-medium">Call</p>
+                        <a href="tel:9443928412" class="font-sans text-xl text-white hover:text-theme-rust transition">9443928412</a>
+                    </div>
+                    <div>
+                        <p class="text-xs uppercase tracking-[0.2em] text-theme-muted mb-2 font-medium">Email</p>
+                        <a href="mailto:rajusureshbabu28@gmail.com" class="font-sans text-xl text-white hover:text-theme-rust transition break-all">rajusureshbabu28@gmail.com</a>
+                    </div>
+                    <div>
+                        <p class="text-xs uppercase tracking-[0.2em] text-theme-muted mb-2 font-medium">Location</p>
+                        <p class="font-sans text-xl text-white leading-relaxed max-w-sm">No.1/804, Kumudham nagar 2nd street, Mugalivakkam, Chennai - 600125</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-[#0f0f0f] p-8 md:p-10 rounded-xl border border-white/10 gsap-fade-up">
+                <form onsubmit="event.preventDefault(); alert('Message sent.');" class="space-y-5 md:space-y-6">
+                    <div>
+                        <input type="text" placeholder="Name" required class="w-full bg-[#1a1a1a] border border-white/5 rounded-lg px-4 py-3 md:py-4 text-white focus:outline-none focus:border-theme-rust transition-colors placeholder-theme-muted/50 text-sm md:text-base font-light">
+                    </div>
+                    <div>
+                        <input type="email" placeholder="Email Address" required class="w-full bg-[#1a1a1a] border border-white/5 rounded-lg px-4 py-3 md:py-4 text-white focus:outline-none focus:border-theme-rust transition-colors placeholder-theme-muted/50 text-sm md:text-base font-light">
+                    </div>
+                    <div>
+                        <textarea rows="4" placeholder="How can we help?" required class="w-full bg-[#1a1a1a] border border-white/5 rounded-lg px-4 py-3 md:py-4 text-white focus:outline-none focus:border-theme-rust transition-colors placeholder-theme-muted/50 resize-none text-sm md:text-base font-light"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-white text-black py-3 md:py-4 rounded-lg font-medium hover:bg-theme-rust hover:text-white transition-colors mt-2 text-sm md:text-base">
+                        Send Inquiry
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="js/app.js"></script>
+</body>
+</html>
