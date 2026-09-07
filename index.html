@@ -60,13 +60,13 @@
     <section id="hero" class="h-[100dvh] min-h-[700px] relative flex items-center overflow-hidden">
         <!-- Background Image with Parallax -->
         <div class="absolute inset-0 z-0 bg-black">
-            <!-- Subtle gradient overlays instead of harsh cutoffs -->
-            <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/20 to-theme-bg z-10 pointer-events-none"></div>
+            <!-- Fade at top, transparent at bottom so image shows through entirely -->
+            <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/20 to-transparent z-10 pointer-events-none"></div>
             <!-- Scaled up and aligned to the bottom to hide the black sky of the original image -->
             <img src="assets/hero_bg.jpg" alt="Truck on road" class="absolute -top-[20%] w-full h-[140%] object-cover object-bottom opacity-60 parallax-bg" data-speed="0.4">
         </div>
 
-        <div class="max-w-7xl mx-auto px-6 lg:px-12 w-full relative z-20 flex flex-col justify-center h-full pt-12 pb-24">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 w-full relative z-20 flex flex-col justify-center h-full pt-12 pb-12">
             <!-- Main Title First -->
             <h1 class="font-display font-black text-[13vw] md:text-[9vw] lg:text-[120px] leading-[0.9] tracking-tighter text-white uppercase gsap-fade-up">
                 L & S<br>Enterprises<span class="text-theme-rust">.</span>
@@ -93,7 +93,7 @@
     </section>
 
     <!-- Mission / Split Screen Section -->
-    <section id="mission" class="relative min-h-[90vh] bg-theme-bg flex items-center overflow-hidden pt-12 md:pt-20">
+    <section id="mission" class="relative min-h-[90vh] bg-theme-bg flex items-center overflow-hidden">
         <div class="w-full grid grid-cols-1 lg:grid-cols-2 min-h-[80vh]">
             
             <!-- Left Text Side -->
@@ -140,7 +140,7 @@
             <img src="assets/wheel_bg.jpg" alt="Truck wheels" class="w-full h-[130%] object-cover object-center opacity-40 parallax-bg" data-speed="0.3">
         </div>
 
-        <div class="max-w-7xl mx-auto px-6 lg:px-12 w-full relative z-20 py-20 md:py-32">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 w-full relative z-20 pt-20 md:pt-32 pb-12 md:pb-16">
             <h4 class="text-xs uppercase tracking-[0.3em] text-theme-rust mb-12 md:mb-16 gsap-fade-up font-medium">Training Services</h4>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 lg:gap-x-16 gap-y-10 md:gap-y-12">
@@ -170,9 +170,44 @@
                 </div>
 
                 <!-- Service Item -->
-                <div class="group gsap-fade-up border-b border-white/10 pb-6 md:pb-8 md:col-span-2">
+                <div class="group gsap-fade-up border-b border-white/10 pb-6 md:pb-8">
+                    <h3 class="font-serif text-xl md:text-2xl text-white mb-3 group-hover:text-theme-rust transition-colors">Hazardous Goods Safety</h3>
+                    <p class="text-theme-muted text-sm md:text-base leading-relaxed font-light">Specialized protocols for the secure handling, transportation, and emergency response of hazardous materials.</p>
+                </div>
+
+                <!-- Service Item -->
+                <div class="group gsap-fade-up border-b border-white/10 pb-6 md:pb-8">
+                    <h3 class="font-serif text-xl md:text-2xl text-white mb-3 group-hover:text-theme-rust transition-colors">Highway Theft & Robbery Safety</h3>
+                    <p class="text-theme-muted text-sm md:text-base leading-relaxed font-light">Strategic awareness and defensive tactics to protect cargo, vehicles, and personnel from highway threats.</p>
+                </div>
+
+                <!-- Service Item -->
+                <div class="group gsap-fade-up border-b border-white/10 pb-6 md:pb-8">
+                    <h3 class="font-serif text-xl md:text-2xl text-white mb-3 group-hover:text-theme-rust transition-colors">Driver Grooming & Professionalism</h3>
+                    <p class="text-theme-muted text-sm md:text-base leading-relaxed font-light">Elevating the standards of personal presentation, etiquette, and professional conduct on and off the road.</p>
+                </div>
+
+                <!-- Service Item -->
+                <div class="group gsap-fade-up border-b border-white/10 pb-6 md:pb-8">
+                    <h3 class="font-serif text-xl md:text-2xl text-white mb-3 group-hover:text-theme-rust transition-colors">First Aid Training</h3>
+                    <p class="text-theme-muted text-sm md:text-base leading-relaxed font-light">Essential emergency medical response skills to handle injuries and secure scenes until professional help arrives.</p>
+                </div>
+
+                <!-- Service Item -->
+                <div class="group gsap-fade-up border-b border-white/10 pb-6 md:pb-8 md:col-span-2 flex flex-col items-center text-center">
                     <h3 class="font-serif text-xl md:text-2xl text-white mb-3 group-hover:text-theme-rust transition-colors">Professional Counseling</h3>
                     <p class="text-theme-muted text-sm md:text-base leading-relaxed font-light max-w-xl">One-on-one coaching for stress management, fatigue, and rebuilding confidence after on-road incidents.</p>
+                </div>
+
+                <!-- Multilingual Notice -->
+                <div class="gsap-fade-up md:col-span-2 flex items-center justify-center pt-2 md:pt-4">
+                    <div class="flex items-center space-x-4 bg-[#0a0a0a]/50 px-8 py-5 rounded-xl border border-theme-rust/20 shadow-2xl">
+                        <i class="fas fa-globe text-theme-rust text-2xl md:text-3xl"></i>
+                        <p class="font-sans font-bold text-sm md:text-base tracking-widest uppercase text-white">
+                            All Trainings Available in<br>
+                            <span class="text-theme-rust">Multiple Languages</span>
+                        </p>
+                    </div>
                 </div>
 
             </div>
@@ -180,7 +215,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-24 md:py-32 px-6 lg:px-12 bg-theme-bg border-t border-white/5 relative z-20 pb-40 md:pb-48">
+    <section id="contact" class="pt-16 md:pt-24 pb-40 md:pb-48 px-6 lg:px-12 bg-theme-bg border-t border-white/5 relative z-20">
         <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 items-start">
             <div class="gsap-fade-up">
                 <h2 class="font-serif text-4xl md:text-6xl text-white mb-6 leading-tight">Ready to <br>prioritize <span class="italic text-theme-rust">safety.</span></h2>
