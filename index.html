@@ -242,8 +242,8 @@
                 </div>
             </div>
             
-            <div class="bg-[#0f0f0f] p-8 md:p-10 rounded-xl border border-white/10 gsap-fade-up">
-                <form action="https://api.web3forms.com/submit" method="POST" class="space-y-6 flex flex-col">
+            <div class="bg-[#0f0f0f] p-6 md:p-10 rounded-xl border border-white/10 gsap-fade-up">
+                <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4 md:space-y-6 flex flex-col">
                     
                     <!-- WEB3FORMS ACCESS KEY -->
                     <input type="hidden" name="access_key" value="33a22e91-d04b-4628-9b43-7998ce153283">
@@ -251,20 +251,30 @@
                     <!-- Subject for emails -->
                     <input type="hidden" name="subject" value="New Inquiry from L&S Enterprises Website">
 
-                    <input type="text" name="name" required placeholder="Name" class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-4 text-white placeholder-white/40 focus:outline-none focus:border-theme-rust transition-colors">
-                    <input type="email" name="email" required placeholder="Email Address" class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-4 text-white placeholder-white/40 focus:outline-none focus:border-theme-rust transition-colors">
-                    <textarea name="message" required placeholder="How can we help?" rows="4" class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-4 text-white placeholder-white/40 focus:outline-none focus:border-theme-rust transition-colors resize-none"></textarea>
+                    <input type="text" name="name" required placeholder="Name" class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 md:py-4 text-sm md:text-base text-white placeholder-white/40 focus:outline-none focus:border-theme-rust transition-colors">
+                    <input type="email" name="email" required placeholder="Email Address" class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 md:py-4 text-sm md:text-base text-white placeholder-white/40 focus:outline-none focus:border-theme-rust transition-colors">
+                    <textarea name="message" required placeholder="How can we help?" rows="4" class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 md:py-4 text-sm md:text-base text-white placeholder-white/40 focus:outline-none focus:border-theme-rust transition-colors resize-none"></textarea>
                     
                     <!-- Simple Success Redirect (You can change this later to a custom thank you page) -->
                     <input type="hidden" name="redirect" value="https://web3forms.com/success">
 
-                    <button type="submit" class="bg-white text-black font-bold py-4 rounded-lg mt-4 hover:bg-theme-rust hover:text-white transition-colors duration-300 w-full tracking-wide">
+                    <button type="submit" class="bg-white text-black font-bold py-3 md:py-4 rounded-lg mt-2 md:mt-4 text-sm md:text-base hover:bg-theme-rust hover:text-white transition-colors duration-300 w-full tracking-wide">
                         Send Inquiry
                     </button>
                 </form>
             </div>
         </div>
     </section>
+
+    <!-- Footer -->
+    <footer class="bg-theme-bg py-8 border-t border-white/5 relative z-20">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 text-center flex flex-col items-center">
+            <img class="h-8 opacity-50 mb-4 grayscale" src="assets/logo.png" alt="L&S Logo">
+            <p class="text-theme-muted/50 text-xs tracking-wider">
+                &copy; 2026 L & S Enterprises. All rights reserved.
+            </p>
+        </div>
+    </footer>
 
     <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
