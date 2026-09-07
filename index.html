@@ -226,34 +226,39 @@
                 <h2 class="font-serif text-4xl md:text-6xl text-white mb-6 leading-tight">Ready to <br>prioritize <span class="italic text-theme-rust">safety.</span></h2>
                 <p class="text-theme-muted text-base md:text-lg mb-10 md:mb-12 font-light">Reach out to discuss your specific training needs or schedule a session.</p>
                 
-                <div class="space-y-6 md:space-y-8">
+                <div class="space-y-5 md:space-y-8">
                     <div>
                         <p class="text-xs uppercase tracking-[0.2em] text-theme-muted mb-2 font-medium">Call</p>
-                        <a href="tel:9443928412" class="font-sans text-xl text-white hover:text-theme-rust transition">9443928412</a>
+                        <a href="tel:9443928412" class="font-sans text-base md:text-xl text-white hover:text-theme-rust transition">9443928412</a>
                     </div>
                     <div>
                         <p class="text-xs uppercase tracking-[0.2em] text-theme-muted mb-2 font-medium">Email</p>
-                        <a href="mailto:rajusureshbabu28@gmail.com" class="font-sans text-xl text-white hover:text-theme-rust transition break-all">rajusureshbabu28@gmail.com</a>
+                        <a href="mailto:rajusureshbabu28@gmail.com" class="font-sans text-base md:text-xl text-white hover:text-theme-rust transition break-all">rajusureshbabu28@gmail.com</a>
                     </div>
                     <div>
                         <p class="text-xs uppercase tracking-[0.2em] text-theme-muted mb-2 font-medium">Location</p>
-                        <p class="font-sans text-xl text-white leading-relaxed max-w-sm">No.1/804, Kumudham nagar 2nd street, Mugalivakkam, Chennai - 600125</p>
+                        <p class="font-sans text-base md:text-xl text-white leading-relaxed max-w-sm">No.1/804, Kumudham nagar 2nd street, Mugalivakkam, Chennai - 600125</p>
                     </div>
                 </div>
             </div>
             
             <div class="bg-[#0f0f0f] p-8 md:p-10 rounded-xl border border-white/10 gsap-fade-up">
-                <form onsubmit="event.preventDefault(); alert('Message sent.');" class="space-y-5 md:space-y-6">
-                    <div>
-                        <input type="text" placeholder="Name" required class="w-full bg-[#1a1a1a] border border-white/5 rounded-lg px-4 py-3 md:py-4 text-white focus:outline-none focus:border-theme-rust transition-colors placeholder-theme-muted/50 text-sm md:text-base font-light">
-                    </div>
-                    <div>
-                        <input type="email" placeholder="Email Address" required class="w-full bg-[#1a1a1a] border border-white/5 rounded-lg px-4 py-3 md:py-4 text-white focus:outline-none focus:border-theme-rust transition-colors placeholder-theme-muted/50 text-sm md:text-base font-light">
-                    </div>
-                    <div>
-                        <textarea rows="4" placeholder="How can we help?" required class="w-full bg-[#1a1a1a] border border-white/5 rounded-lg px-4 py-3 md:py-4 text-white focus:outline-none focus:border-theme-rust transition-colors placeholder-theme-muted/50 resize-none text-sm md:text-base font-light"></textarea>
-                    </div>
-                    <button type="submit" class="w-full bg-white text-black py-3 md:py-4 rounded-lg font-medium hover:bg-theme-rust hover:text-white transition-colors mt-2 text-sm md:text-base">
+                <form action="https://api.web3forms.com/submit" method="POST" class="space-y-6 flex flex-col">
+                    
+                    <!-- WEB3FORMS ACCESS KEY -->
+                    <input type="hidden" name="access_key" value="33a22e91-d04b-4628-9b43-7998ce153283">
+                    
+                    <!-- Subject for emails -->
+                    <input type="hidden" name="subject" value="New Inquiry from L&S Enterprises Website">
+
+                    <input type="text" name="name" required placeholder="Name" class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-4 text-white placeholder-white/40 focus:outline-none focus:border-theme-rust transition-colors">
+                    <input type="email" name="email" required placeholder="Email Address" class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-4 text-white placeholder-white/40 focus:outline-none focus:border-theme-rust transition-colors">
+                    <textarea name="message" required placeholder="How can we help?" rows="4" class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-4 text-white placeholder-white/40 focus:outline-none focus:border-theme-rust transition-colors resize-none"></textarea>
+                    
+                    <!-- Simple Success Redirect (You can change this later to a custom thank you page) -->
+                    <input type="hidden" name="redirect" value="https://web3forms.com/success">
+
+                    <button type="submit" class="bg-white text-black font-bold py-4 rounded-lg mt-4 hover:bg-theme-rust hover:text-white transition-colors duration-300 w-full tracking-wide">
                         Send Inquiry
                     </button>
                 </form>
